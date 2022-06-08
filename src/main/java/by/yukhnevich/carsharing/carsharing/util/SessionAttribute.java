@@ -1,0 +1,9 @@
+package by.yukhnevich.carsharing.carsharing.util;
+
+public final class SessionAttribute {
+    public static final String USER = "user";
+
+    public static final String LANGUAGE = "locale";
+
+    private SessionAttribute() {}
+}

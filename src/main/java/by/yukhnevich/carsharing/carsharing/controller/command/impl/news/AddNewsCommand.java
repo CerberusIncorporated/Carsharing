@@ -1,0 +1,56 @@
+package by.yukhnevich.carsharing.carsharing.controller.command.impl.news;
+
+import by.yukhnevich.carsharing.carsharing.controller.command.Command;
+import by.yukhnevich.carsharing.carsharing.model.entity.News;
+import by.yukhnevich.carsharing.carsharing.model.entity.user.User;
+import by.yukhnevich.carsharing.carsharing.model.service.NewsService;
+import by.yukhnevich.carsharing.carsharing.model.service.ServiceProvider;
+import by.yukhnevich.carsharing.carsharing.model.service.exception.InvalidDataException;
+import by.yukhnevich.carsharing.carsharing.model.service.exception.ServiceException;
+import by.yukhnevich.carsharing.carsharing.util.RequestParameter;
+import by.yukhnevich.carsharing.carsharing.util.SessionAttribute;
+import jakarta.servlet.ServletException;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.io.IOException;
+
+/**
+ * Adds {@link News} to the database
+ *
+ * @see Command
+ */
+public class AddNewsCommand implements Command {
+
+    private static final Logger LOGGER = LogManager.getLogger();
+    private static final ServiceProvider SERVICE_PROVIDER = ServiceProvider.getInstance();
+    private static final String GO_TO_NEWS_PAGE = "Controller?command=gotonewspage";
+    private static final String GO_TO_NEWS_EDIT_PAGE = "Controller?command=gotonewseditpage&validation=%s&error=%s";
+
+    @Override
+    public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        String commandResult = GO_TO_NEWS_PAGE;
+
+        HttpSession session = request.getSession();
+        int userId = ((User) session.getAttribute(SessionAttribute.USER)).getId();
+        String header = request.getParameter(RequestParameter.HEADER_EDITOR);
+        String content = request.getParameter(RequestParameter.CONTENT_EDITOR);
+        String imagePath = (String) request.getAttribute(RequestParameter.IMAGE_PATH);
+
+        try {
+            NewsService newsService = SERVICE_PROVIDER.getNewsService();
+            News news = new News(userId, header, content, imagePath);
+            newsService.add(news);
+        } catch (ServiceException e) {
+            LOGGER.error(e);
+            commandResult = String.format(GO_TO_NEWS_EDIT_PAGE, null, true);
+        } catch (InvalidDataException e) {
+            LOGGER.error(e);
+            commandResult = String.format(GO_TO_NEWS_EDIT_PAGE, true, null);
+        }
+        response.sendRedirect(commandResult);
+    }
+}
