@@ -22,28 +22,28 @@ The administrator can reject the application by specifying the reasons for refus
 | Approve/Decline payment | -     | -    | +     |
 
 
-##Demo
-###News page
+## Demo
+### News page
 ![news_guest](screenshots/news_guest.JPG)
-###Register
+### Register
 ![news_admin](screenshots/register.JPG)
-###Login
+### Login
 ![login](screenshots/login.JPG)
-###Car
+### Car
 Guest/User
 ![car_guest](screenshots/cars_guest.JPG)
 Admin
 ![car_admin](screenshots/cars_admin.JPG)
-###Order
+### Order
 ![order](screenshots/order.JPG)
-###Orders list
+### Orders list
 User
 ![order_user](screenshots/order_user.JPG)
 Admin
 ![orders_admin](screenshots/orders_admin.JPG)
-###Payment
+### Payment
 ![payment](screenshots/payment.JPG)
-##Database diagram
+## Database diagram
 ![database](screenshots/db.JPG)
 
 
