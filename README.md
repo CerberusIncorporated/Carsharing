@@ -1,7 +1,7 @@
 <h1>Carsharing</h1>
 <hr>
 <h4>The customer selects a car from the list of available ones.
-Fills out the order form, specifying passport details, rental period.<br>
+Fills out the order form, specifying passport details, rental period.
 The customer pays for the order.<br>
 The administrator registers the return of the car. In case of damage to the car, the administrator enters the information and issues an invoice for repairs.
 The administrator can reject the application by specifying the reasons for refusal.</h4>
