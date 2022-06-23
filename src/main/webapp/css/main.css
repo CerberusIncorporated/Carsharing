@@ -55,7 +55,7 @@ a:focus {
 
 a:hover {
 	text-decoration: none;
-  color: #1b3815;
+  color: #FFFF00;
 }
 
 /*---------------------------------------------*/
@@ -104,15 +104,15 @@ textarea:focus, input:focus {
 }
 
 
-input::-webkit-input-placeholder { color: #1b3815;}
-input:-moz-placeholder { color: #1b3815;}
-input::-moz-placeholder { color: #1b3815;}
-input:-ms-input-placeholder { color: #1b3815;}
+input::-webkit-input-placeholder { color: #FFFF00;}
+input:-moz-placeholder { color: #FFFF00;}
+input::-moz-placeholder { color: #FFFF00;}
+input:-ms-input-placeholder { color: #FFFF00;}
 
-textarea::-webkit-input-placeholder { color: #1b3815;}
-textarea:-moz-placeholder { color: #1b3815;}
-textarea::-moz-placeholder { color: #1b3815;}
-textarea:-ms-input-placeholder { color: #1b3815;}
+textarea::-webkit-input-placeholder { color: #FFFF00;}
+textarea:-moz-placeholder { color: #FFFF00;}
+textarea::-moz-placeholder { color: #FFFF00;}
+textarea:-ms-input-placeholder { color: #FFFF00;}
 
 /*---------------------------------------------*/
 button {
@@ -141,14 +141,14 @@ iframe {
 .txt2 {
   font-family: Ubuntu-Regular;
   font-size: 15px;
-  color: #57b846;
+  color: #FFFF00;
   line-height: 1.4;
 }
 
 .txt3 {
   font-family: Ubuntu-Bold;
   font-size: 15px;
-  color: #57b846;
+  color: #FFFF00;
   line-height: 1.4;
   text-transform: uppercase;
 }
@@ -175,7 +175,7 @@ iframe {
   align-items: center;
   padding: 15px;
   position: relative;
-  background-color: #fff;
+  background-color: #3DDAFA;
 }
 
 .wrap-login100 {
@@ -202,7 +202,7 @@ iframe {
 .login100-form-title {
   font-family: JosefinSans-Bold;
   font-size: 30px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
   text-align: center;
 
@@ -211,7 +211,7 @@ iframe {
   width: 100%;
   top: 0;
   left: 0;
-  background-color: #57b846;
+  background-color: #FFFF00;
   padding-top: 50px;
   padding-bottom: 39px;
 }
@@ -221,7 +221,7 @@ iframe {
 
 .wrap-input100 {
   width: 100%;
-  background-color: #fff;
+  background-color: #3DDAFA;
   border-radius: 27px;
   position: relative;
   z-index: 1;
@@ -230,14 +230,14 @@ iframe {
 .input100 {
   font-family: Ubuntu-Bold;
   font-size: 15px;
-  color: #1b3815;
+  color: #FFFF00;
   line-height: 1.2;
 
   position: relative;
   display: block;
   width: 100%;
   height: 55px;
-  background: #ebebeb;
+  background: #3DDAFA;
   border-radius: 27px;
   padding: 0 35px 0 35px;
 }
@@ -260,7 +260,7 @@ iframe {
   -o-transform: translateX(-50%);
   transform: translateX(-50%);
   border-radius: 31px;
-  background-color: #ebebeb;
+  background-color: #3DDAFA;
   pointer-events: none;
   
   -webkit-transition: all 0.4s;
@@ -297,12 +297,12 @@ iframe {
   padding: 0 20px;
   width: 100%;
   height: 50px;
-  background-color: #57b846;
+  background-color: #FFFF00;
   border-radius: 25px;
 
   font-family: Ubuntu-Bold;
   font-size: 15px;
-  color: #fff;
+  color: #000;
   line-height: 1.2;
   text-transform: uppercase;
 
@@ -329,7 +329,7 @@ iframe {
   position: absolute;
   z-index: 1000;
   max-width: 70%;
-  background-color: #fff;
+  background-color: #3DDAFA;
   border: 1px solid #c80000;
   border-radius: 14px;
   padding: 4px 25px 4px 10px;

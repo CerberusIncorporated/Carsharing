@@ -26,6 +26,7 @@
     </fmt:bundle>
 </head>
 <body style="background: #3DDAFA">
+<jsp:include page="/WEB-INF/jsp/header.jsp"/>
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100">
