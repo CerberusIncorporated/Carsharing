@@ -40,10 +40,19 @@
                 <div class="container-login100-form-btn">
                     <button class="login100-form-btn" type="submit">${log_in}</button>
                 </div>
+
                 <c:set var="is_register_failed" scope="request" value="${requestScope.error}"/>
                 <c:set var="is_invalid_data" scope="request" value="${requestScope.validation}"/>
-                ${error_message}
-                ${validation_message}
+
+                <c:choose>
+                    <c:when test="${is_register_failed}">
+                        ${error_message}
+                    </c:when>
+                    <c:when test="${is_invalid_data}">
+                        ${validation_message}
+                    </c:when>
+                </c:choose>
+
                 <div class=" flex-col-c p-t-170 p-b-40">
 						<span class="txt1 p-b-9">
                             ${no_account}
